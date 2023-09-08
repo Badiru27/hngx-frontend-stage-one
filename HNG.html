@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <script type="text/javascript">
+    let slackName = "Scoba";
+
+    let date = new Date();
+    let day = date.getDay();
+    const daysOfTheWeek = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
+
+    const dayOfTheWeek = daysOfTheWeek[day];
+
+    const currentTimeInUTC = date.getTime();
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const currentDayOfTheWeekElement = document.getElementById(
+        "currentDayOfTheWeek"
+      );
+      currentDayOfTheWeekElement.textContent = dayOfTheWeek;
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const currentUTCTimeElement = document.getElementById("currentUTCTime");
+      currentUTCTimeElement.textContent = currentTimeInUTC;
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const slackUserNameElement = document.getElementById("slackUserName");
+      slackUserNameElement.textContent = slackName;
+    });
+  </script>
+
+  <head>
+    <meta charset="utf-8" />
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <style>
+    .img {
+      display: block;
+      width: 90px;
+      border-radius: 70px;
+      margin: auto;
+      padding-top: 12px;
+    }
+
+    .aweda {
+      font-size: 15px;
+      font: bold;
+      text-align: center;
+      color: rgb(61, 61, 1);
+    }
+    .scoba {
+      font-size: 20px;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.5);
+    }
+    .page {
+      font-size: 20px;
+      text-align: center;
+      color-interpolation-filters: linearRGB;
+    }
+    .html {
+      font-size: 15px;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.5);
+    }
+    .hr {
+      height: 1px;
+      width: 550px;
+    }
+    .react {
+      font-size: 22px;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.5);
+    }
+    .to {
+      color: rgba(0, 0, 0, 0.5);
+      text-align: center;
+      font-size: 15px;
+    }
+    .head {
+      width: 800px;
+    }
+    .num {
+      font-size: 50px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .day {
+      font-size: 20px;
+      color: rgba(0, 0, 0, 0.5);
+      text-align: center;
+    }
+    .show {
+      background-color: beige;
+      width: 600px;
+      height: 700px;
+      border-radius: 10px;
+      display: block;
+      margin: auto;
+      margin-top: 120px;
+    }
+  </style>
+
+  <body>
+    <div class="show">
+      <img
+        id="slackDisplayImage"
+        alt="slackDisplayImage"
+        class="img"
+        src="king.jpg"
+      />
+      <p class="aweda">Aweda Ibrahim Ismaila</p>
+      <p id="slackUserName" class="scoba"></p>
+      <p class="html">Leaning html&css</p>
+      <p class="to">To become a frontend master</p>
+      <p class="react" id="myTrack">Frontend</p>
+      <hr class="hr" />
+      <p id="currentDayOfTheWeek" class="day">Tuesday</p>
+      <p class="num" id="currentUTCTime"></p>
+    </div>
+  </body>
+</html>
