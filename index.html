@@ -52,7 +52,7 @@
     }
 
     .aweda {
-      font-size: 15px;
+      font-size: 24px;
       font: bold;
       text-align: center;
       color: rgb(61, 61, 1);
@@ -83,11 +83,10 @@
     }
     .to {
       color: rgba(0, 0, 0, 0.5);
-      display:block;
-      margin: auto;
-      font-size: 15px;
       text-align: center;
-    
+      font-size: 15px;
+      display:block;
+      margin: auto;   
     }
     .head {
       width: 800px;
@@ -115,24 +114,20 @@
   </style>
 
   <body>
-    <div class="show">
+    <div class="show" >
       <img
         id="slackDisplayImage"
-        alt="slackDisplayImage"
+        data-testid="slackDisplayImage"
+        alt="scoba"
         class="img"
         src="king.jpg"
       />
-      <p class="aweda">Aweda Ibrahim Ismaila</p>
-      <p id="slackUserName" class="scoba"></p>
-      <p class="html">Leaning html&css</p>
-      <p class="to">To become a frontend master</p>
-      <a id="githubURL" class="to" href="https://github.com/scoba4se/hngx-frontend-stage-one">GitHub</a>
-      <p class="react" id="myTrack">Frontend</p>
+      <p id="slackUserName" data-testid="slackUserName" class="aweda"></p>
+      <a id="githubURL" data-testid="githubURL" class="to" href="https://github.com/scoba4se/hngx-frontend-stage-one">GitHub</a>
+      <p class="react" id="myTrack" data-testid="myTrack">Frontend</p>
       <hr class="hr" />
-      <p id="currentDayOfTheWeek" class="day">Tuesday</p>
-      <p class="num" id="currentUTCTime"></p>
+      <p id="currentDayOfTheWeek" data-testid="githubURL" class="day">Tuesday</p>
+      <p class="num" id="currentUTCTime" data-testid="currentUTCTime"></p>
     </div>
   </body>
 </html>
-
-
